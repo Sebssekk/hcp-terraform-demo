@@ -30,7 +30,7 @@ resource "aws_key_pair" "tf_ssh_key" {
 resource "aws_instance" "tf_instance" {
   ami           = data.aws_ami.instance_ami.id
   key_name      = aws_key_pair.tf_ssh_key.key_name 
-  instance_type = "t3.micro"
+  instance_type = var.ec2_type
   subnet_id     = aws_subnet.tf_pub_subnet.id
   associate_public_ip_address = true
   vpc_security_group_ids = [

@@ -1,3 +1,9 @@
+variable "ec2_type" {
+  description = "EC2 family type"
+  type = string
+  default = "t3.small"
+  
+}
 variable "name_prefix" {
   description = "Prefix Name pr every resources"
   type = string
