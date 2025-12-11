@@ -20,7 +20,7 @@ This project demonstrates how to use Terraform to provision and manage AWS infra
 - **`network.tf`** - VPC, subnets, internet gateway, and routing configuration
 - **`compute.tf`** - EC2 instance, security groups, and SSH key pair setup
 - **`output.tf`** - Output values (e.g., instance public IP)
-- **`local.tfvars`** - Local variable values (not committed to version control)
+- **`terraform.tfvars`** - Local variable values (not committed to version control)
 
 ![infrastructure Draw](./infrastructure-schema.png)
 
@@ -33,7 +33,7 @@ This project demonstrates how to use Terraform to provision and manage AWS infra
 ## Usage
 
 1. Clone or download this repository
-2. Update `local.tfvars` with your desired configuration:
+2. Update `terraform.tfvars` with your desired configuration:
    ```hcl
    prefix_name         = "your-prefix"
    public_key_material = file("~/.ssh/id_rsa.pub")
@@ -44,24 +44,23 @@ This project demonstrates how to use Terraform to provision and manage AWS infra
    ```
 4. Plan your infrastructure:
    ```bash
-   terraform plan -var-file=local.tfvars
+   terraform plan 
    ```
 5. Apply the configuration:
    ```bash
-   terraform apply -var-file=local.tfvars
+   terraform apply 
    ```
 
 ## Notes
 
 - This is a **demo project** for learning purposes only
-- Private subnet and NAT Gateway configurations are commented out
 - Ensure sensitive data (SSH keys, credentials) are never committed to version control (see `.gitignore`)
 
 ## Cleanup
 
 To destroy all provisioned resources:
 ```bash
-terraform destroy -var-file=local.tfvars
+terraform destroy 
 ```
 
-### Course by Klabs
+### Course by [Klabs](https://www.klabs.it)
