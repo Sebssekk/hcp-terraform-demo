@@ -4,6 +4,8 @@
 
 This repository contains example Terraform configuration files for demonstration purposes as part of an **HCP Terraform exploration** project.
 
+*THIS BRANCH CONTAINS CODE FOR **CLI/API DRIVEN WORKSPACE*** 
+
 ## Purpose
 
 This project demonstrates how to use Terraform to provision and manage AWS infrastructure, including:

@@ -1,11 +1,13 @@
 terraform {
+  ### ONLY REQUIRED FOR CLI DRIVEN APPROACH ###
   cloud {
-    organization = "klabstest"
+    organization = "<ORG NAME>"
     workspaces {
-      project = "seb-demo"
-      name = "API-demo1"
+      project = "<PROJECT_NAME>"
+      name = "<WORKSPACE NAME>"
     }
   }
+  #############################################
   required_providers {
     aws = {
       source = "hashicorp/aws"
