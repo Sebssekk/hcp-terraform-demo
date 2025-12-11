@@ -14,3 +14,14 @@ variable "tf_pub_subnet__cidr_block" {
   type =  string
   default = "192.168.1.0/24"
 }
+
+variable "ami_name_filter" {
+  description = "Filter for get AMI default Ubuntu 25.04"
+  type = string
+  default = "ubuntu/images/hvm-ssd-gp3/ubuntu-plucky*"
+}
+
+variable "public_key_material" {
+  description = "SSH Public Key content"
+  type = string
+}
