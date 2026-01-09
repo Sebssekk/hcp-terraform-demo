@@ -36,8 +36,8 @@ This project demonstrates how to use Terraform to provision and manage AWS infra
 1. Clone or download this repository
 2. Update `terraform.tfvars` with your desired configuration:
    ```hcl
-   prefix_name         = "your-prefix"
-   public_key_material = file("~/.ssh/id_rsa.pub")
+   name_prefix         = "your-prefix"
+   public_key_material = "your-public-key (eg. ssh-ed25519 AAAAC3N...)"
    ```
 3. Initialize Terraform:
    ```bash
@@ -63,5 +63,6 @@ To destroy all provisioned resources:
 ```bash
 terraform destroy 
 ```
+
 
 ### Course by [Klabs](https://www.klabs.it)
